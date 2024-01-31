@@ -1,0 +1,1 @@
+AMI_IMG = ami-0c7217cdde317cfec 
