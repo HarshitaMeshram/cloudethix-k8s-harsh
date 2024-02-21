@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: master-nginx
+spec:
+  selector:
+    matchLabels:
+      app: master-nginx
+  template:
+    metadata:
+      labels:
+        app: master-nginx
+    spec:
+      containers:
+      - name:  master-nginx
+        image: harshitameshram/cloudethix_master_nginx_harsh:v1
+        ports:
+        - containerPort: 80

@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: release-nginx
+spec:
+  selector:
+    matchLabels:
+      app: release-nginx
+  template:
+    metadata:
+      labels:
+        app: release-nginx
+    spec:
+      containers:
+      - name: release-nginx
+        image: harshitameshram/cloudethix_release_nginx_harsh:v2
+        ports:
+        - containerPort: 80

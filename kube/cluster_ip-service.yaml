@@ -1,0 +1,13 @@
+#  SERVICE CLUSTER_IP-SERVICE.YAML
+apiVersion: v1
+kind: Service
+metadata:
+  name: cloudethix-clusterip
+spec:
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+  selector:
+    app: release-nginx
+  type: ClusterIP
